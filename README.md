@@ -26,18 +26,18 @@ git@github.com:Kimberly-Rodriguez/Energy_Consumption_Dashboard.git
 
 The following image demonstrates the dashboard homepage's appearance and functionality:
 
-![The home page shows a dashboard composed of three graphs, two numbers (min and max forecast), and a set of filters]()
+![The home page shows a dashboard composed of three graphs, two numbers (min and max forecast), and a set of filters](###)
 
 The following image demonstrates the dashboard results page's appearance and functionality:
 
-![The results page displays the main graph displaying two lines one forthe forecast values, and anotherforthe actual values.]()
+![The results page displays the main graph displaying two lines one forthe forecast values, and anotherforthe actual values.](###)
 
 
 ## Tools
 
 This application utilized HTML, CSS, Javascript, Node.js, Express.js, MongoDB, Mongoose, Graphql, and React.
 
-To learn about how to use this data, check out the data.json located in side [Innowatts](https://drive.google.com/drive/folders/1MtoF85tQuc0KtJzaMmjnDuDC9IlkW24h?usp=sharing).
+To learn about how to use this data, check out the data.json located inside [Innowatts](https://drive.google.com/drive/folders/1MtoF85tQuc0KtJzaMmjnDuDC9IlkW24h?usp=sharing) google folder.
 
 
 ## Contact
