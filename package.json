@@ -1,0 +1,29 @@
+{
+  "name": "energy_consumption_dashboard",
+  "version": "1.0.0",
+  "description": "To track/predict an energy consumption through a dashboard display of key data",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kimberly-Rodriguez/Energy_Consumption_Dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kimberly-Rodriguez/Energy_Consumption_Dashboard/issues"
+  },
+  "homepage": "https://github.com/Kimberly-Rodriguez/Energy_Consumption_Dashboard#readme"
+ 
+}
