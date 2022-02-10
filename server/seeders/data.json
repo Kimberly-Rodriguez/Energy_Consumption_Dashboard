@@ -1,9 +1,10 @@
-[
+
+ [
   {
-    "time": "2021-02-23T0:00:00Z",
+    "time": "2021-02-23T0:00:00Z", 
     "meterId": "m1",
-    "forecast": 33.94,
-    "actual": 20.36,
+    "forecast": 33.94, 
+    "actual": 20.36, 
     "zone": "illinois"
   },
   {
