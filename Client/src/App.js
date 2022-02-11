@@ -6,6 +6,8 @@ import Analytics from "./components/Analytics";
 import CardMin from "./components/CardMin";
 import CardMax from "./components/CardMax";
 import Footer from "./components/Footer";
+import ForecastChart from "./components/ForecastChart";
+import ActualChart from "./components/ActualChart";
 // import SidebarRight from "./components/SidebarRight";
 import "./style.css";
 import "./App.css";
@@ -30,7 +32,7 @@ export default function App() {
           <div id="content">
             {/* <!-- Topbar --> */}
             <NavTab />
-            
+
             {/* <!-- End of Topbar --> */}
 
             {/* <!-- Begin Page Content --> */}
@@ -39,15 +41,15 @@ export default function App() {
 
               {/* <!-- Content Row --> */}
               {/* <!-- Content Row --> */}
-            <div className="row">
-              {/* <!-- Content Column --> */}
-              <div className="col-lg-6 mb-4">
-                <CardMax />
+              <div className="row">
+                {/* <!-- Content Column --> */}
+                <div className="col-lg-6 mb-4">
+                  <CardMax />
+                </div>
+                <div className="col-lg-6 mb-4">
+                  <CardMin />
+                </div>
               </div>
-              <div className="col-lg-6 mb-4">
-                <CardMin />
-              </div>
-            </div>
 
               {/* <!-- Content Row --> */}
               <div className="row">
@@ -56,21 +58,18 @@ export default function App() {
                   <Analytics />
                 </div>
               </div>
-
-              
             </div>
 
             {/* <!-- Content Row --> */}
             <div className="row">
               {/* <!-- Content Column --> */}
               <div className="col-lg-6 mb-4">
-                <Analytics />
+                <ForecastChart />
               </div>
               <div className="col-lg-6 mb-4">
-              <Analytics />
+                <ActualChart />
               </div>
             </div>
-            
           </div>
         </div>
       </div>
@@ -80,4 +79,3 @@ export default function App() {
     </div>
   );
 }
-

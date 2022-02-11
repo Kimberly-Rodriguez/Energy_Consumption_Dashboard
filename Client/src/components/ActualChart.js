@@ -16,9 +16,8 @@ export default class App extends React.Component {
           },
           {type: 'line', x: [1, 2, 3], y: [2, 5, 3]},
         ]}
-        layout={ {width: 830, height: 280, title: 'Forecast'} }
+        layout={ {width: 830, height: 280, title: 'Actual'} }
       />
     );
   }
 }
-

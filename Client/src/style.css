@@ -6671,9 +6671,9 @@ button.bg-dark:focus {
   .d-sm-table-cell {
     display: table-cell !important;
   }
-  .d-sm-flex {
+  /* .d-sm-flex {
     display: flex !important;
-  }
+  } */
   .d-sm-inline-flex {
     display: inline-flex !important;
   }
