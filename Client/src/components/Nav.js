@@ -33,7 +33,7 @@ export default function NavTab() {
         </div>
 
         <a
-          href="#"
+          href="https://github.com/Kimberly-Rodriguez/Energy_Consumption_Dashboard.git"
           className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
         >
           <i className="fas fa-sm text-white-50"></i>Learn More
