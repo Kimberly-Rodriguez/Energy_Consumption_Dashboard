@@ -40,11 +40,11 @@ export default class App extends React.Component {
             ),
             y: this.state.json_data.map(({ actual }) => actual),
             type: "scatter",
-            mode: "lines+markers",
+            mode: "line",
             marker: { color: "blue" },
           },
         ]}
-        layout={{ width: 1100, height: 400, title: "Forcast vs Actual" }}
+        layout={{ width: 1000, height: 280, title: "Forcast vs Actual" }}
       />
     );
   }

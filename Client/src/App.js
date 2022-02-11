@@ -8,7 +8,10 @@ import CardMax from "./components/CardMax";
 import Footer from "./components/Footer";
 import ForecastChart from "./components/ForecastChart";
 import ActualChart from "./components/ActualChart";
+import Filtersbar from "./components/Filtersbar";
+
 // import SidebarRight from "./components/SidebarRight";
+// import "font-awesome/css/font-awesome.min.css";
 import "./style.css";
 import "./App.css";
 
@@ -18,10 +21,7 @@ export default function App() {
       {/* <!-- Page Wrapper --> */}
       <div id="wrapper">
         {/* <!-- Sidebar --> */}
-        {/* <ul
-          class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
-          id="accordionSidebar"
-        ></ul> */}
+      
         {/* <!-- Sidebar - Brand --> */}
         <SidebarLeft />
         {/* <!-- End of Sidebar --> */}
@@ -50,12 +50,14 @@ export default function App() {
                   <CardMin />
                 </div>
               </div>
-
               {/* <!-- Content Row --> */}
               <div className="row">
-                {/* <!-- Chart --> */}
-                <div className="col-xl-8 col-lg-8">
+                {/* <!-- Content Column --> */}
+                <div className="col-lg-8 mb-4">
                   <Analytics />
+                </div>
+                <div className="col-lg-4 mb-4">
+                  <Filtersbar />
                 </div>
               </div>
             </div>
@@ -79,3 +81,25 @@ export default function App() {
     </div>
   );
 }
+
+
+
+//Analytics + Filters
+{/* <div className="row-flex">
+
+<div className="col-xl-8 col-lg-8">
+
+  <div class="card-body">
+    <Analytics />
+  </div>
+</div>
+
+
+<div class="col-xl-4 col-lg-5">
+<div class="card shadow mb-4">
+<div class="card-body">
+    <Filtersbar />
+    </div>
+</div>
+</div>
+</div> */}

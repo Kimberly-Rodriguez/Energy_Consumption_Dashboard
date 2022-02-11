@@ -1,10 +1,15 @@
 import React from "react";
 import '../style.css';
+// import "font-awesome/css/font-awesome.min.css";
+
 
 
 export default function sidebarLeft() {
 
 return (
+
+
+ 
 
 <div>
 {/* <!-- Sidebar --> */}
@@ -18,6 +23,7 @@ return (
           href="index.html"
         >
           <div className="sidebar-brand-icon rotate-n-15">
+          
             <i className="fas fa-tachometer-alt"></i>
           </div>
           <div className="sidebar-brand-text mx-3">Innowatts</div>
