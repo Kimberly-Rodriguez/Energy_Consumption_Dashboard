@@ -49,7 +49,7 @@ export default function Filtersbar({setZone}) {
     className="d-flex justify-content-between align-items-start"
   >
     <div className="ms-2 me-auto">
-      <button className="fw-grey" onClick={()=>setZone("New York")}>New York</button>
+      <button className="fw-grey" onClick={()=>setZone("new_york")}>New York</button>
       
     </div>
    
@@ -59,7 +59,7 @@ export default function Filtersbar({setZone}) {
     className="d-flex justify-content-between align-items-start"
   >
     <div className="ms-2 me-auto">
-      <button className="fw-grey" onClick={()=>setZone("Texas")}>Texas</button>
+      <button className="fw-grey" onClick={()=>setZone("texas")}>Texas</button>
       
     </div>
    
