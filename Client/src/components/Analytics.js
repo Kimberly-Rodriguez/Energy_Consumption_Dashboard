@@ -4,8 +4,6 @@ import Plot from "react-plotly.js";
 
 export const Analytics = ({data}) => {
   
-  
-
     return (
       <Plot
         data={[
