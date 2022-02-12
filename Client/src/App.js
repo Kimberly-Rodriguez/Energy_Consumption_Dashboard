@@ -75,10 +75,10 @@ export const App = () => {
               <div className="row">
                 {/* <!-- Content Column --> */}
                 <div className="col-lg-6 mb-4">
-                  <Cards findMax={findMax()} findMin={findMin()} type="max" />
+                  <Cards findMax={findMax()} findMin={findMin()} type="Max Forecast" />
                 </div>
                 <div className="col-lg-6 mb-4">
-                  <Cards findMax={findMax()} findMin={findMin()} type="min" />
+                  <Cards findMax={findMax()} findMin={findMin()} type="Min Forecast" />
                 </div>
               </div>
               {/* <!-- Content Row --> */}
@@ -115,22 +115,3 @@ export const App = () => {
 
 
 
-//Analytics + Filters
-{/* <div className="row-flex">
-
-<div className="col-xl-8 col-lg-8">
-
-  <div class="card-body">
-    <Analytics />
-  </div>
-</div>
-
-
-<div class="col-xl-4 col-lg-5">
-<div class="card shadow mb-4">
-<div class="card-body">
-    <Filtersbar />
-    </div>
-</div>
-</div>
-</div> */}

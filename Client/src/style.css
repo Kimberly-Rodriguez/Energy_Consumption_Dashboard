@@ -353,7 +353,10 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0.5rem;
   font-weight: 400;
   line-height: 1.2;
+  
 }
+
+
 
 h1, .h1 {
   font-size: 2.5rem;
@@ -4343,6 +4346,7 @@ input[type="button"].btn-block {
 .navbar-expand > .container-fluid, .navbar-expand > .container-sm, .navbar-expand > .container-md, .navbar-expand > .container-lg, .navbar-expand > .container-xl {
   padding-right: 0;
   padding-left: 0;
+  padding-top: 1em;
 }
 
 .navbar-expand .navbar-nav {

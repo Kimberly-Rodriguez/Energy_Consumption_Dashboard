@@ -8,10 +8,10 @@ export function Cards({findMax, findMin, type}) {
         <div className="row no-gutters align-items-center">
           <div className="col mr-2">
             <div className="text-xs font-weight-bold text-success text-uppercase mb-1">
-             { type}
+             { type }
             </div>
-            <div className="h5 mb-0 font-weight-bold text-gray-800">
-             {type === "max"? findMax : findMin}
+            <div id="type" className="h5 mb-0 font-weight-bold text-gray-800">
+             {type === "Max Forecast"? findMax : findMin}
             </div>
           </div>
           <div className="col-auto">
