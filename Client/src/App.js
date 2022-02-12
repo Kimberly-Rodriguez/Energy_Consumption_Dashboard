@@ -1,13 +1,13 @@
 // import logo from './logo.svg';
-import React from "react";
+import React , {useState, useEffect} from "react";
 import NavTab from "./components/Nav";
 import SidebarLeft from "./components/SidebarLeft";
-import Analytics from "./components/Analytics";
-import CardMin from "./components/CardMin";
-import CardMax from "./components/CardMax";
+import {Analytics} from "./components/Analytics";
+
+import {Cards} from "./components/Cards";
 import Footer from "./components/Footer";
-import ForecastChart from "./components/ForecastChart";
-import ActualChart from "./components/ActualChart";
+import {Charts} from "./components/Charts";
+
 import Filtersbar from "./components/Filtersbar";
 
 // import SidebarRight from "./components/SidebarRight";
@@ -15,7 +15,38 @@ import Filtersbar from "./components/Filtersbar";
 import "./style.css";
 import "./App.css";
 
-export default function App() {
+export const App = () => {
+
+  const [zone, setZone]= useState(''); 
+
+  const [json_data, setJson_data] = useState([]);
+
+  useEffect(() => {
+    // Simple GET request with a JSON body using fetch
+    const requestOptions = {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    };
+    fetch("http://127.0.0.1:3001/getData", requestOptions)
+      .then((response) => response.json())
+      .then((data) => setJson_data(data));
+
+   }, []);
+
+   const findMax = () => {
+    const filterData = zone ? json_data.filter(data=>data.zone === zone) : json_data;
+    const forecastData = filterData.map(data => parseInt(data.forecast));
+    return Math.max(...forecastData);
+    
+   }
+
+   const findMin = () => {
+    const filterData = zone ? json_data.filter(data=>data.zone === zone) : json_data;
+    const forecastData = filterData.map(data => parseInt(data.forecast));
+    return Math.min(...forecastData);
+    
+   }
+
   return (
     <div id="page-top">
       {/* <!-- Page Wrapper --> */}
@@ -44,20 +75,20 @@ export default function App() {
               <div className="row">
                 {/* <!-- Content Column --> */}
                 <div className="col-lg-6 mb-4">
-                  <CardMax />
+                  <Cards findMax={findMax()} findMin={findMin()} type="max" />
                 </div>
                 <div className="col-lg-6 mb-4">
-                  <CardMin />
+                  <Cards findMax={findMax()} findMin={findMin()} type="min" />
                 </div>
               </div>
               {/* <!-- Content Row --> */}
               <div className="row">
                 {/* <!-- Content Column --> */}
                 <div className="col-lg-8 mb-4">
-                  <Analytics />
+                  <Analytics data={zone ? json_data.filter((data)=> data.zone === zone) : json_data}/>
                 </div>
                 <div className="col-lg-4 mb-4">
-                  <Filtersbar />
+                  <Filtersbar setZone={setZone} />
                 </div>
               </div>
             </div>
@@ -65,12 +96,12 @@ export default function App() {
             {/* <!-- Content Row --> */}
             <div className="row">
               {/* <!-- Content Column --> */}
-              <div className="col-lg-6 mb-4">
-                <ForecastChart />
+               <div className="col-lg-6 mb-4">
+                <Charts type="forecast" data={zone ? json_data.filter((data)=> data.zone === zone) : json_data}/>
               </div>
               <div className="col-lg-6 mb-4">
-                <ActualChart />
-              </div>
+                <Charts type="actual" data={zone ? json_data.filter((data)=> data.zone === zone) : json_data}/>
+              </div> 
             </div>
           </div>
         </div>

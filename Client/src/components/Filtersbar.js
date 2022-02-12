@@ -3,8 +3,12 @@ import "../App.css";
 import "../style.css";
 import ListGroup from 'react-bootstrap/ListGroup'
 
-export default function Filtersbar() {
+export default function Filtersbar({setZone}) {
+ 
+  
+ 
   return (
+
     
         <ListGroup as="ol" >
         <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -15,7 +19,7 @@ export default function Filtersbar() {
     className="d-flex justify-content-between align-items-start"
   >
     <div className="ms-2 me-auto">
-      <div className="fw-grey">All Zones</div>
+      <button className="fw-grey" onClick={()=>setZone("")}>All Zones</button>
       
     </div>
     
@@ -25,7 +29,7 @@ export default function Filtersbar() {
     className="d-flex justify-content-between align-items-start"
   >
     <div className="ms-2 me-auto">
-      <div className="fw-grey">California</div>
+      <button className="fw-grey" onClick={()=>setZone("california")}>California</button>
       
     </div>
    
@@ -35,7 +39,7 @@ export default function Filtersbar() {
     className="d-flex justify-content-between align-items-start"
   >
     <div className="ms-2 me-auto">
-      <div className="fw-grey">Illinois</div>
+      <button className="fw-grey" onClick={()=>setZone("illinois")}>Illinois</button>
      
     </div>
    
@@ -45,7 +49,7 @@ export default function Filtersbar() {
     className="d-flex justify-content-between align-items-start"
   >
     <div className="ms-2 me-auto">
-      <div className="fw-grey">New York</div>
+      <button className="fw-grey" onClick={()=>setZone("New York")}>New York</button>
       
     </div>
    
@@ -55,7 +59,7 @@ export default function Filtersbar() {
     className="d-flex justify-content-between align-items-start"
   >
     <div className="ms-2 me-auto">
-      <div className="fw-grey" >Texas</div>
+      <button className="fw-grey" onClick={()=>setZone("Texas")}>Texas</button>
       
     </div>
    
