@@ -1,28 +1,24 @@
-// import logo from './logo.svg';
-import React , {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import { Analytics } from "./components/Analytics";
+import { Cards } from "./components/Cards";
+import { Charts } from "./components/Charts";
 import NavTab from "./components/Nav";
 import SidebarLeft from "./components/SidebarLeft";
-import {Analytics} from "./components/Analytics";
-
-import {Cards} from "./components/Cards";
 import Footer from "./components/Footer";
-import {Charts} from "./components/Charts";
-
 import Filtersbar from "./components/Filtersbar";
 
-// import SidebarRight from "./components/SidebarRight";
-// import "font-awesome/css/font-awesome.min.css";
 import "./style.css";
 import "./App.css";
 
 export const App = () => {
+  //Using useState for Zone and json_data
 
-  const [zone, setZone]= useState(''); 
+  const [zone, setZone] = useState("");
 
   const [json_data, setJson_data] = useState([]);
 
   useEffect(() => {
-    // Simple GET request with a JSON body using fetch
+    // GET request with a JSON body using fetch + useEffect to load data on page load
     const requestOptions = {
       method: "GET",
       headers: { "Content-Type": "application/json" },
@@ -30,62 +26,67 @@ export const App = () => {
     fetch("http://127.0.0.1:3001/getData", requestOptions)
       .then((response) => response.json())
       .then((data) => setJson_data(data));
+  }, []);
 
-   }, []);
-
-   const findMax = () => {
-    const filterData = zone ? json_data.filter(data=>data.zone === zone) : json_data;
-    const forecastData = filterData.map(data => parseInt(data.forecast));
+  // Min and Max filtering and mapping for Cards compnent
+  const findMax = () => {
+    const filterData = zone
+      ? json_data.filter((data) => data.zone === zone)
+      : json_data;
+    const forecastData = filterData.map((data) => parseInt(data.forecast));
     return Math.max(...forecastData);
-    
-   }
+  };
 
-   const findMin = () => {
-    const filterData = zone ? json_data.filter(data=>data.zone === zone) : json_data;
-    const forecastData = filterData.map(data => parseInt(data.forecast));
+  const findMin = () => {
+    const filterData = zone
+      ? json_data.filter((data) => data.zone === zone)
+      : json_data;
+    const forecastData = filterData.map((data) => parseInt(data.forecast));
     return Math.min(...forecastData);
-    
-   }
+  };
 
   return (
     <div id="page-top">
-      {/* <!-- Page Wrapper --> */}
+      {/* Page Wrapper */}
       <div id="wrapper">
-        {/* <!-- Sidebar --> */}
-      
-        {/* <!-- Sidebar - Brand --> */}
+        {/* Sidebar */}
         <SidebarLeft />
-        {/* <!-- End of Sidebar --> */}
-
-        {/* <!-- Content Wrapper --> */}
+        {/*  Content Wrapper */}
         <div id="content-wrapper" class="d-flex flex-column">
-          {/* <!-- Main Content --> */}
+          {/* Main Content */}
           <div id="content">
-            {/* <!-- Topbar --> */}
+            {/* Topbar */}
             <NavTab />
-
-            {/* <!-- End of Topbar --> */}
-
-            {/* <!-- Begin Page Content --> */}
+            {/* Begin Page Content */}
             <div className="container-fluid">
-              {/* <!-- Page Heading --> */}
-
-              {/* <!-- Content Row --> */}
-              {/* <!-- Content Row --> */}
               <div className="row">
-                {/* <!-- Content Column --> */}
+                {/* Content Column */}
                 <div className="col-lg-6 mb-4">
-                  <Cards findMax={findMax()} findMin={findMin()} type="Max Forecast" />
+                  <Cards
+                    findMax={findMax()}
+                    findMin={findMin()}
+                    type="Min Forecast"
+                  />
                 </div>
                 <div className="col-lg-6 mb-4">
-                  <Cards findMax={findMax()} findMin={findMin()} type="Min Forecast" />
+                  <Cards
+                    findMax={findMax()}
+                    findMin={findMin()}
+                    type="Max Forecast"
+                  />
                 </div>
               </div>
-              {/* <!-- Content Row --> */}
+              {/* Content Row */}
               <div className="row">
-                {/* <!-- Content Column --> */}
+                {/* Content Column */}
                 <div className="col-lg-8 mb-4">
-                  <Analytics data={zone ? json_data.filter((data)=> data.zone === zone) : json_data}/>
+                  <Analytics
+                    data={
+                      zone
+                        ? json_data.filter((data) => data.zone === zone)
+                        : json_data
+                    }
+                  />
                 </div>
                 <div className="col-lg-4 mb-4">
                   <Filtersbar setZone={setZone} />
@@ -93,25 +94,37 @@ export const App = () => {
               </div>
             </div>
 
-            {/* <!-- Content Row --> */}
+            {/* Content Row */}
             <div className="row">
-              {/* <!-- Content Column --> */}
-               <div className="col-lg-6 mb-4">
-                <Charts type="forecast" data={zone ? json_data.filter((data)=> data.zone === zone) : json_data}/>
+              {/* Content Column */}
+              <div className="col-lg-6 mb-4">
+                <Charts
+                  type="forecast"
+                  data={
+                    zone
+                      ? json_data.filter((data) => data.zone === zone)
+                      : json_data
+                  }
+                />
               </div>
               <div className="col-lg-6 mb-4">
-                <Charts type="actual" data={zone ? json_data.filter((data)=> data.zone === zone) : json_data}/>
-              </div> 
+                <Charts
+                  type="actual"
+                  data={
+                    zone
+                      ? json_data.filter((data) => data.zone === zone)
+                      : json_data
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div>
+        {/* Lowerbar */}
         <Footer />
       </div>
     </div>
   );
-}
-
-
-
+};

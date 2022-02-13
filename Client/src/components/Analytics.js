@@ -4,8 +4,6 @@ import Plot from "react-plotly.js";
 
 export const Analytics = ({data}) => {
   
-  
-
     return (
       <Plot
         data={[
@@ -19,6 +17,7 @@ export const Analytics = ({data}) => {
             mode: "line",
             marker: { color: "blue" },
             name: "actual"
+          
           },
          
           {
