@@ -35,7 +35,7 @@ The following image demonstrates the dashboard results page's appearance and fun
 
 ## Tools
 
-This application utilized HTML, CSS, Javascript, Node.js, Express.js, MongoDB, Mongoose, Graphql, and React.
+This application utilized HTML, CSS, Javascript, Node.js, Express.js and React.
 
 To learn about how to use this data, check out the data.json located inside [Innowatts](https://drive.google.com/drive/folders/1MtoF85tQuc0KtJzaMmjnDuDC9IlkW24h?usp=sharing) google folder.
 
