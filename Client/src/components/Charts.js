@@ -5,7 +5,7 @@ import "../style.css";
 
 
 export const Charts = ({type, data}) => {
-  
+  //Using Plotly to graph by either "actual" or "forcast" data 
     return (
       <Plot
       data={[

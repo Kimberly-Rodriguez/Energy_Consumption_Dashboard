@@ -5,6 +5,7 @@ import Plot from "react-plotly.js";
 export const Analytics = ({data}) => {
   
     return (
+      //Using Plotly to graph X: time and Y: "actual" and "forecast" 
       <Plot
         data={[
           

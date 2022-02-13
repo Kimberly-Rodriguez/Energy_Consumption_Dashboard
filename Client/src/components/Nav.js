@@ -9,7 +9,7 @@ export default function NavTab() {
 
     <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
       <div className="container-fluid">
-        {/* <!-- Page Heading --> */}
+        {/* Page Heading */}
         <div className=" align-items-center justify-content-between mb-4">
           <h1 id="dashboard" className="h3 mb-0 text-gray-800">Dashboard</h1>
           <div className= "row">

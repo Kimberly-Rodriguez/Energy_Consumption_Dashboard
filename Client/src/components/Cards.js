@@ -3,6 +3,7 @@ import "../style.css";
 
 export function Cards({findMax, findMin, type}) {
   return (
+    // Passing findMax, findMin to be dynamically changed based on type
     <div className="card border-left-success shadow h-100 py-2">
       <div className="card-body">
         <div className="row no-gutters align-items-center">
