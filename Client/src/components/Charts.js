@@ -1,12 +1,12 @@
 import React from "react";
-import { ToggleButton } from "react-bootstrap";
+// import { ToggleButton } from "react-bootstrap";
 import Plot from "react-plotly.js";
 import "../style.css";
 
 
 
-export const Charts = ({type, data}) => {
-  //Using Plotly to graph by either "actual" or "forcast 
+export const Charts = ({type, data , color}) => {
+  //Using Plotly to graph "actual" and "forecast" graphs
 
 
     return (
@@ -19,7 +19,7 @@ export const Charts = ({type, data}) => {
           y: data.map(( d ) => d[type]),
           type: "scatter",
           mode: "line",
-          marker: {color: "blue"}
+          marker: {color}
           
         }
       ]}
@@ -55,6 +55,7 @@ export const Charts = ({type, data}) => {
                     color: 'blue'
                   }
               },
+              
               // Button: {
               //   title: "line-graph",
               // }

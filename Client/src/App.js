@@ -103,6 +103,7 @@ export const App = () => {
 
                 //conditional to filter by type
                   type="forecast"
+                  color="orange"
                   data={
                     zone
                       ? json_data.filter((data) => data.zone === zone)
@@ -113,6 +114,7 @@ export const App = () => {
               <div className="col-lg-6 mb-4">
                 <Charts
                   type="actual" 
+                  color="blue"
                   data={
                     zone
                       ? json_data.filter((data) => data.zone === zone)

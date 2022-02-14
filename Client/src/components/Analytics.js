@@ -6,6 +6,8 @@ export const Analytics = ({data}) => {
   
     return (
       //Using Plotly to graph and outline X: time and Y: "actual" and "forecast" 
+
+
       <Plot
       
         data={[
