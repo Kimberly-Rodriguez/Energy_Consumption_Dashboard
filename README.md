@@ -10,11 +10,20 @@
 
 ## Description
 
-A dashboard that display meter level electric energy consumption for the short term (10 days ahead). 
+A dashboard that displays three graphs (with meter level electric energy consumption data for the short term (10 days ahead)), two numbers (min and max forecast), and a set of filters. 
 
-Using json dataset that represents meter level forecasts and actual energy readings for 15 meters, this application allows users to plot time vs forecast and actual energy reading by a selected zone or all combined. 
+The main graph displays two bar graphs, one for the forecast values color coded orange, and another for the actual values color coded blue. The bottom left graph displays only the forecast values, and the bottom right graph displays only the
+actual values.
 
-Finally, users will be able to gain a big picture understanding of the energy reading by actual energy consumption in one place. 
+The top min and max forecast values represents the min and max value of the graphed forecast.
+ 
+The zone filters are used to dipict json dataset that represents meter level forecasts and actual energy readings for 15 meters each tied to a specific zone (New York | Illinois | Texas | California).
+
+When a user clicks on a specific zone all graphs and min /
+max values update to display the data corresponding to the aggregated sum values of the meters in the
+selected zone. 
+
+Finally, the goal of this dashboard app is for users to gain a big picture understanding of the energy reading by actual energy consumption and forecast in order to make informed data driven decisions. 
 
 ## Installation
 
@@ -28,30 +37,30 @@ The following image demonstrates the dashboard homepage's appearance and functio
 
 ![The home page shows a dashboard composed of three graphs, two cards w/ numbers: min and max forecast, and a set of filters](./src/images/allZone.png)
 
-The following image demonstrates the dashboard results homepage's appearance and functionality for California:
+The following image demonstrates the dashboard results homepage's appearance and functionality for California zone:
 
-![The home page shows a dashboard composed of three graphs, two cards w/ numbers: min and max forecast for California](./src/images/californiaZone.png)
+![The home page shows a dashboard composed of three graphs, two cards w/ numbers: min and max forecast for California zone](./src/images/californiaZone.png)
 
-The following image demonstrates the dashboard results homepage's appearance and functionality for Texas:
+The following image demonstrates the dashboard results homepage's appearance and functionality for Texas zone:
 
-![The home page shows a dashboard composed of three graphs, two cards w/ numbers: min and max forecast for Illinois](./src/images/illinoisZone.png)
-The following image demonstrates the dashboard results homepage's appearance and functionality for Texas:
+![The home page shows a dashboard composed of three graphs, two cards w/ numbers: min and max forecast for Illinois zone](./src/images/illinoisZone.png)
+The following image demonstrates the dashboard results homepage's appearance and functionality for Texas zone:
 
-![The home page shows a dashboard composed of three graphs, two cards w/ numbers: min and max forecast for New York](./src/images/newyorkZone.png)
+![The home page shows a dashboard composed of three graphs, two cards w/ numbers: min and max forecast for New York zone](./src/images/newyorkZone.png)
 
-The following image demonstrates the dashboard results homepage's appearance and functionality for Texas:
+The following image demonstrates the dashboard results homepage's appearance and functionality for Texas zone:
 
-![The home page shows a dashboard composed of three graphs, two cards w/ numbers: min and max forecast for Texas](./src/images/texasZone.png)
+![The home page shows a dashboard composed of three graphs, two cards w/ numbers: min and max forecast for Texas zone](./src/images/texasZone.png)
 
 
 
 ## Tools
 
-This application utilized HTML, CSS, Bootstrap, Javascript, Node.js, Express.js and React .
+This application was made using HTML, CSS, Bootstrap, Javascript, Plotly, Node.js, Express.js and React .
 
-The following are some of the key npm packages used for application functionality: bootstrap-icons, font-awesome, react, react-bootstrap, react-dom, react-plotly.js, cors, express. 
+To use this application the following npm packages are needed: bootstrap-icons, font-awesome, react, react-bootstrap, react-dom, react-plotly.js, cors, express. 
 
-To learn about how to use this data, check out the data.json located inside [Innowatts](https://drive.google.com/drive/folders/1MtoF85tQuc0KtJzaMmjnDuDC9IlkW24h?usp=sharing) google folder.
+To learn more about how to use this data, check out the data.json located inside [Innowatts](https://drive.google.com/drive/folders/1MtoF85tQuc0KtJzaMmjnDuDC9IlkW24h?usp=sharing) google folder.
 
 
 ## Contact

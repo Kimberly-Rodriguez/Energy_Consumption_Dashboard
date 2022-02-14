@@ -20,7 +20,8 @@ export const Analytics = ({data}) => {
             marker: { color: "blue" },
             name: "actual",
             responsive: true,
-            editable: true
+            editable: true,
+           
 
           },
          
@@ -31,14 +32,46 @@ export const Analytics = ({data}) => {
             y: data.map(({ forecast }) => forecast),
             type: "scater",
             mode: 'line',
-            marker: { color: "orange" },
+            marker: {color: "orange"} ,
             name: "forecast",
             responsive: true,
-            editable: true
+            editable: true,
+           
            
           },
         ]}
-        layout={{ width: 1000, height: 280, title: "Forcast vs Actual" }}
+        layout={{ width: 1000, 
+                  height: 280,
+                  title: '<b>Forcast vs Actual</b>',
+                
+                  xaxis: {
+                    title: "Time",
+                    tittlefont: {
+                      family: 'Arial, sans-serif',
+                      size: 12,
+                      color: 'blue'
+                    },
+                    showticklabels: true,
+                    thickfont: {
+                      family: 'Arial, sans-serif',
+                      size:12,
+                      color: 'blue'
+                    }
+                  },
+                  yaxis: {
+                    title: "Energy (kwh)",
+                    tittlefont: {
+                      family: 'Arial, sans-serif',
+                      size: 12,
+                      color: 'blue'
+                    },
+                    showticklabels: true,
+                    thickfont: {
+                      family: 'Arial, sans-serif',
+                      size:12,
+                      color: 'blue'
+                    }
+                }}}
       />
     );
   

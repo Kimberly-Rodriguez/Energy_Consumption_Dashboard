@@ -1,6 +1,6 @@
 import React from "react";
 import "../style.css";
-// import "font-awesome/css/font-awesome.min.css";
+
 
 export default function sidebarLeft() {
   return (
@@ -27,26 +27,37 @@ export default function sidebarLeft() {
         {/* Heading */}
         <div className="sidebar-heading">Menu</div>
 
+         {/* Nav Item Dashboard */}
+         
+
+
+<li className="nav-item active">
+    <a className="nav-link" href="index.html">
+    <i className="bi bi-pie-chart"></i>
+        <span>Dashboard</span></a>
+</li>
+
+
         {/* Nav Item Forecast */}
         <li className="nav-item">
-          <a className="nav-link collapsed">
+          <ul className="nav-link collapsed">
             <i className="bi bi-bar-chart-line"></i>
             <span>Forecast</span>
-          </a>
+          </ul>
         </li>
         {/* Nav Item Users */}
         <li className="nav-item">
-          <a className="nav-link collapsed">
+          <ul className="nav-link collapsed">
             <i className="bi bi-people"></i>
             <span>Users</span>
-          </a>
+          </ul>
         </li>
         {/* Nav Item Help */}
         <li className="nav-item">
-          <a className="nav-link collapsed">
+          <ul className="nav-link collapsed">
             <i className="bi bi-question-circle"></i>
             <span>Help</span>
-          </a>
+          </ul>
         </li>
       </ul>
     </div>
