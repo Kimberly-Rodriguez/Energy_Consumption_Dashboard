@@ -1,5 +1,5 @@
 import React from "react";
-// import { ToggleButton } from "react-bootstrap";
+import { ToggleButtonGroup } from "react-bootstrap";
 import Plot from "react-plotly.js";
 import "../style.css";
 
@@ -10,8 +10,10 @@ export const Charts = ({type, data , color}) => {
 
 
     return (
+
       <Plot
       data={[
+   
         {
           x: data.map(({ time }) =>
             time.replace("Z", "").split("T").join(" ")
@@ -55,10 +57,9 @@ export const Charts = ({type, data , color}) => {
                     color: 'blue'
                   }
               },
+          
               
-              // Button: {
-              //   title: "line-graph",
-              // }
+             
               }}
       />
     );

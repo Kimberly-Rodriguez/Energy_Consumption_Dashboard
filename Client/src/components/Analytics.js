@@ -1,11 +1,13 @@
 import React from "react";
 import Plot from "react-plotly.js";
-
+import { ToggleButtonGroup } from "react-bootstrap";
 
 export const Analytics = ({data}) => {
   
     return (
       //Using Plotly to graph and outline X: time and Y: "actual" and "forecast" 
+     
+    
 
 
       <Plot

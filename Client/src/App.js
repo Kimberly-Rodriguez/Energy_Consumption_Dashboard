@@ -81,7 +81,9 @@ export const App = () => {
               <div className="row">
                 {/* Content Column */}
                 <div className="col-lg-8 mb-4">
+                 
                   <Analytics
+
                     data={
                       zone
                         ? json_data.filter((data) => data.zone === zone)
