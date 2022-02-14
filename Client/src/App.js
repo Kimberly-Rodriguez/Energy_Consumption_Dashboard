@@ -45,6 +45,7 @@ export const App = () => {
     return Math.min(...forecastData);
   };
 
+
   return (
     <div id="page-top">
       {/* Page Wrapper */}
@@ -99,6 +100,8 @@ export const App = () => {
               {/* Content Column */}
               <div className="col-lg-6 mb-4">
                 <Charts
+
+                //conditional to filter by type
                   type="forecast"
                   data={
                     zone
@@ -109,7 +112,7 @@ export const App = () => {
               </div>
               <div className="col-lg-6 mb-4">
                 <Charts
-                  type="actual"
+                  type="actual" 
                   data={
                     zone
                       ? json_data.filter((data) => data.zone === zone)

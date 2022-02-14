@@ -5,7 +5,9 @@ import "../style.css";
 
 
 export const Charts = ({type, data}) => {
-  //Using Plotly to graph by either "actual" or "forcast" data 
+  //Using Plotly to graph by either "actual" or "forcast 
+
+
     return (
       <Plot
       data={[
@@ -16,8 +18,10 @@ export const Charts = ({type, data}) => {
           y: data.map(( d ) => d[type]),
           type: "scatter",
           mode: "line",
-          marker: { color: "blue" },
+          marker: {color: "blue"} 
+          
         },
+        
       ]}
         layout={ {width: 830, height: 280, title: type} }
       />

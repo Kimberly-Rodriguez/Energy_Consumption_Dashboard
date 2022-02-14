@@ -1,12 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import Plot from "react-plotly.js";
 
 
 export const Analytics = ({data}) => {
   
     return (
-      //Using Plotly to graph X: time and Y: "actual" and "forecast" 
+      //Using Plotly to graph and outline X: time and Y: "actual" and "forecast" 
       <Plot
+      
         data={[
           
           {
@@ -14,11 +15,13 @@ export const Analytics = ({data}) => {
               time.replace("Z", "").split("T").join(" ")
             ),
             y: data.map(({ actual }) => actual),
-            type: "scatter",
-            mode: "line",
+            type: "scater",
+            mode: 'line',
             marker: { color: "blue" },
-            name: "actual"
-          
+            name: "actual",
+            responsive: true,
+            editable: true
+
           },
          
           {
@@ -26,10 +29,12 @@ export const Analytics = ({data}) => {
               time.replace("Z", "").split("T").join(" ")
             ),
             y: data.map(({ forecast }) => forecast),
-            type: "scatter",
-            mode: "line",
+            type: "scater",
+            mode: 'line',
             marker: { color: "orange" },
-            name: "forecast"
+            name: "forecast",
+            responsive: true,
+            editable: true
            
           },
         ]}
