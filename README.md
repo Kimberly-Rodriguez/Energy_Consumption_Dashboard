@@ -41,10 +41,10 @@ The following image demonstrates the dashboard results homepage's appearance and
 
 ![The home page shows a dashboard composed of three graphs, two cards w/ numbers: min and max forecast for California zone](./src/images/californiaZone.png)
 
-The following image demonstrates the dashboard results homepage's appearance and functionality for Texas zone:
+The following image demonstrates the dashboard results homepage's appearance and functionality for Illinois zone:
 
 ![The home page shows a dashboard composed of three graphs, two cards w/ numbers: min and max forecast for Illinois zone](./src/images/illinoisZone.png)
-The following image demonstrates the dashboard results homepage's appearance and functionality for Texas zone:
+The following image demonstrates the dashboard results homepage's appearance and functionality for New York zone:
 
 ![The home page shows a dashboard composed of three graphs, two cards w/ numbers: min and max forecast for New York zone](./src/images/newyorkZone.png)
 
